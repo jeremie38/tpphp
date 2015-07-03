@@ -1,0 +1,25 @@
+<h1>Connexion</h1>
+
+<div id="login">
+    <div align="center">
+        <div id="logoAccueil"></div>
+    </div>
+
+    <h2>Entrer vos identifiants</h2>
+
+    <form action="/TestForm" method="post" >
+        <p>
+            <input class="input-text" type="text" id="identifiant" name="identifiant" size="30" value="Identifiant" onblur="if(this.value=='')this.value='Identifiant';"onclick="if(this.value=='Identifiant')this.value='';"/>
+        </p>
+        <p>
+            <input class="input-text" type="password" id="mdp" name="mdp" size="30" value="Mot de passe" onblur="if(this.value=='')this.value='Mot de passe';" onclick="if(this.value=='Mot de passe')this.value='';" />
+        </p>
+        <p>
+            <button id="connexion">Connexion</button>
+        </p>
+        </br>
+    </form>
+</div>
+
+
+

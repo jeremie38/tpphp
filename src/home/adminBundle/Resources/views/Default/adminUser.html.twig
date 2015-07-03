@@ -1,0 +1,48 @@
+<header style="width: 100%; height: 50px; background-color: grey">
+    <font color="white">BIENVENUE SUR VIDEOLUDIQUE</font>
+</header>
+
+<div align="left"><h1>Partie Administration</h1></div>
+<form action="decoAdmin" method="post" >
+    <div align="right"><button>Deconnexion</button></div>
+</form>
+
+<div align="center">
+
+        <div>
+            <h3 style="text-align:left ">Ajouter des vidéos :</h3>
+
+            <form action="adminUser" method="post">
+                <p>
+                    <input class="input-text" type="text" id="urlVideo" name="urlVideo" size="30" value="Entrer l'url de la vidéo" />
+                </p>
+                <p>
+                    <button id="AjouterVideo">Ajouter</button>
+                </p>
+                </br>
+            </form>
+        </div>
+
+        <h3>Vidéo en ligne</h3>
+
+</div>
+<div style="text-align: center; width: auto">
+    {% for currentVideo in videos %}
+    <div style="display:inline-block;margin:18px; width: 400px; height:200px;">
+            <video style="height:200Px;width:auto" controls="controls">
+                <source src="{{ currentVideo.url }}" type="video/mp4" />
+            </video></br>
+
+            <form action="DeleteVideo" method="post" >
+                <button id="DeleteVideo" name="DeleteVideo">supprimer</button>
+                <input type="hidden" name="idVideo" value="{{ currentVideo.id }}"/>
+            </form>
+    </div>
+    {% endfor %}
+
+</div>
+
+
+
+
+
