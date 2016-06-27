@@ -1,15 +1,45 @@
-accueil:
-    resource: "@AccueilBundle/Controller/"
-    type:     annotation
-    prefix:   /
 
-admin:
-    resource: "@adminBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-login:
+User:
     resource: "@loginBundle/Controller/"
     type:     annotation
     prefix:   /
+Login:
+    pattern:  /Login
+    defaults: { _controller: UserBundle:Default:Login }
+TestForm:
+    pattern:  /TestForm
+    defaults: { _controller: UserBundle:Default:TestForm }
 
+    
+    
+user:
+    resource: "@AccueilBundle/Controller/"
+    type:     annotation
+    prefix:   /
+Accueil:
+    pattern:  /Accueil
+    defaults: { _controller: UserBundle:Default:Accueil }
+LoginRedirect:
+    pattern:  /LoginRedirect
+    defaults: { _controller: UserBundle:Default:LoginRedirect }
+
+    
+   
+Admin:
+    resource: "@adminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+admin:
+    pattern:  /admin
+    defaults: { _controller: UserBundle:Default:admin }
+adminUser:
+    pattern:  /adminUser
+    defaults: { _controller: UserBundle:Default:adminUser }
+decoAdmin:
+    pattern:  /decoAdmin
+    defaults: { _controller: UserBundle:Default:decoAdmin }  
+DeleteVideo:
+    pattern:  /DeleteVideo
+    defaults: { _controller: UserBundle:Default:DeleteVideo }     
+  
+    
